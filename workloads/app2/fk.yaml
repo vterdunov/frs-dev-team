@@ -1,0 +1,17 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: app2
+  namespace: dev-team
+spec:
+  force: false
+  interval: 60m
+  path: ./workloads/app2
+  prune: true
+  retryInterval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: dev-team-sync
+  targetNamespace: dev-team
+  timeout: 3m
+  wait: true
