@@ -1,7 +1,7 @@
 apiVersion: v1
-kind: ConfigMap
+kind: Secret
 metadata:
   name: test
-  namespace: dev-team
+type: Opaque
 stringData:
   foo: bar
