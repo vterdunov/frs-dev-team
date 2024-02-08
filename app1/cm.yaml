@@ -1,8 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: app2
-  namespace: dev-team
+  name: app1
 type: Opaque
 stringData:
   foo: bar
