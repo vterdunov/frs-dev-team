@@ -13,5 +13,5 @@ spec:
     kind: GitRepository
     name: dev-team-sync
   targetNamespace: dev-team
-  timeout: 3m
+  timeout: 1m
   wait: true
