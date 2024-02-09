@@ -1,17 +1,5 @@
-apiVersion: kustomize.toolkit.fluxcd.io/v1
+apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-metadata:
-  name: app1
-  namespace: dev-team
-spec:
-  force: false
-  interval: 60m
-  path: ./workloads/app1
-  prune: true
-  retryInterval: 5m
-  sourceRef:
-    kind: GitRepository
-    name: dev-team-sync
-  targetNamespace: dev-team
-  timeout: 1m
-  wait: true
+resources:
+- fk.yaml
+- secret.yaml
